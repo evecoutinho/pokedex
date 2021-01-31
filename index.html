@@ -19,10 +19,10 @@
                     <h2>Bulbasaur</h2>
                     <small>#1</small>
                 </div>
-                <div class="img">
+                <div class="img bg-water">
                     <img src="https://pokeres.bastionbot.org/images/pokemon/1.png" alt="" />
                 </div>
-                <div class="type">
+                <div class="type water">
                     <p>Grass</p>
                 </div>
                 <button class="favorite">
@@ -40,6 +40,43 @@
                 const clone = card.cloneNode(true);
                 cards.appendChild(clone)
             }
+
+            const colors = {
+                fire: '#E4604D',
+                grass: '#9dd465',
+                eletric: '#F9E45F',
+                water: '#6A83D6',
+                ground: '#E4C967',
+                rock: '#CABB7B',
+                fairy: '#EEB2FA',
+                poison: '#9F619D',
+                bug: '#C5CF4A',
+                dragon: '#857AF7',
+                psychic: '#E56EAF',
+                flying: '#80A4F9',
+                fighting: '#9B5A48',
+                normal: '#BAB8AB',
+            }; 
+
+            const style = [];
+            const variables = [];
+            for( let key in colors){
+                 
+                variables.push(`--${key}: ${colors[key]};\n`);
+
+                const css = `
+                    .bg-${key}{
+                        background: linear-gradient(to top right, var(--${key}), var(--card-bg) 25%);   
+                    }
+                    .${key}{
+                        background-color: var(--${key});
+                    }
+                    `;
+
+                    style.push(css);
+            }
+            console.log(variables.join(''));
+            console.log(style.join(''));
         </script>
 </body>
 
