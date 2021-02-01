@@ -2,10 +2,12 @@ const types = [
     'dragon',
     'fairy',
     'dark',
+    'steel',
     'fire',
-    'grass',
-    'electric',
     'water',
+    'ice',
+    'electric',
+    'grass',
     'ground',
     'rock',
     'ghost',
@@ -15,8 +17,6 @@ const types = [
     'flying',
     'fighting',
     'normal',
-    'ice',
-    'steel',
 ];
 
 const POKEMON_COUNT = 151;
