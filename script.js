@@ -19,7 +19,7 @@ const types = [
     'steel',
 ];
 
-const POKEMON_COUNT = 649;
+const POKEMON_COUNT = 151;
 
 const cardHTML = `
 <div class="card" id="card-{id}">
